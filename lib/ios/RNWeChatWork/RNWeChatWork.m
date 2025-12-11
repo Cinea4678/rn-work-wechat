@@ -87,9 +87,18 @@ RCT_EXPORT_METHOD(SSOAuth:(NSString *)state)
 
 - (Boolean)SSO:(NSString *)state {
     WWKSSOReq *req = [WWKSSOReq new];
-
     req.state = state;
-    [WWKApi sendReq:req];
+    
+    // 使用新的异步接口
+    [WWKApi sendReq:req completionHandler:^(WWKApiResponseErrorCode errorCode) {
+        // 在这里处理发送结果的回调
+        if (errorCode == WWKApiResponseErrorCodeOK) {
+            NSLog(@"企业微信 SSO 请求发送成功");
+        } else {
+            NSLog(@"企业微信 SSO 请求发送失败，错误码：%ld", (long)errorCode);
+        }
+    }];
+
     return true;
 }
 
