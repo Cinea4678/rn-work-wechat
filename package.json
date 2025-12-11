@@ -1,5 +1,5 @@
 {
-  "name": "rn-work-wechat",
+  "name": "rn-work-wechat-plus",
   "version": "1.0.3",
   "description": "React Native 企业微信 SDK",
   "main": "lib/index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rn-parts/rn-work-wechat"
+    "url": "https://github.com/Cinea4678/rn-work-wechat-plus"
   },
   "keywords": [
     "wechat",

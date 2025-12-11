@@ -1,7 +1,6 @@
-
 require 'json'
 
-package = JSON.parse(File.read(File.join(__dir__, '../../package.json')))
+package = JSON.parse(File.read(File.join(__dir__, 'package.json')))
 
 Pod::Spec.new do |s|
   s.name         = package['name']
@@ -14,9 +13,9 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "7.0"
   s.source       = { :git => package['repository']['url'] }
-  s.source_files = '**/*.{h,m}'
+  s.source_files = 'lib/ios/**/*.{h,m}'
 
-  s.vendored_libraries = 'WXWorkApi/libWXWorkApi.a'
+  s.vendored_libraries = 'lib/ios/WXWorkApi/libWXWorkApi.a'
 
   s.requires_arc = true
 
@@ -25,3 +24,4 @@ Pod::Spec.new do |s|
   #s.dependency "others"
 
 end
+
