@@ -1,6 +1,6 @@
 {
   "name": "rn-work-wechat-plus",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "React Native 企业微信 SDK",
   "main": "lib/index.js",
   "scripts": {
